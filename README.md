@@ -161,6 +161,8 @@ node test/client-harness.mjs  # 浏览器半侧离线行为测试（stub 平台 
 
 版本兼容：`peerDependencies` 声明 `@deepseek-ai/dsh: ^0.2.0-rc.2`（0.2.1-rc.2 起兼容门用 semver satisfies 校验，精确钉死 `0.2.0-rc.2` 会被静默跳载；caret 范围在 0.2.0-rc.2 与 0.2.1-rc.2 运行时均合规）。宿主演面（commands/sessions/sessionPersistence/workspaceRegistry/webServer/connection）经 0.2.0→0.2.1 diff 核对为一致或纯增量子段。
 
+版本历史见 [CHANGELOG.md](CHANGELOG.md)。
+
 ## 许可证
 
 [MIT](LICENSE) © 2026 devkaij
