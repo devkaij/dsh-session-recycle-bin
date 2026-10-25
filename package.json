@@ -1,0 +1,56 @@
+{
+  "name": "dsh-session-recycle-bin",
+  "version": "1.4.1",
+  "description": "DSH 会话回收站：/recycle 斜杠命令 + 侧边栏 GUI（删除/恢复/彻底清除，删除即时摘除侧栏行）；v1.4.0 起定时任务（自动化任务）同样纳入回收站语义（删除可恢复，/recycle sched 与面板页签）；v1.4.1 修复面板按钮点不动（弹层 portal 到 body，脱离侧边栏层叠上下文）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "devkaij",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "recycle-bin",
+    "trash",
+    "session",
+    "restore",
+    "schedule"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devkaij/dsh-session-recycle-bin.git"
+  },
+  "homepage": "https://github.com/devkaij/dsh-session-recycle-bin#readme",
+  "bugs": {
+    "url": "https://github.com/devkaij/dsh-session-recycle-bin/issues"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": "^0.2.0-rc.2"
+  }
+}

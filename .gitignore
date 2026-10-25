@@ -1,0 +1,17 @@
+# 依赖（link 进 profile 时本目录不装依赖；有运行时依赖才 pnpm install --prod）
+node_modules/
+
+# 调试残留：一次性探针脚本与本机截图，不入库
+.diag/
+
+# 本地备份与编辑器产物
+*.bak
+*.bak-*
+*.orig
+*.rej
+*~
+*.log
+
+# 系统杂项
+.DS_Store
+Thumbs.db

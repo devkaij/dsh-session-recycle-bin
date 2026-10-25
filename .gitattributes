@@ -1,0 +1,8 @@
+# 仓库内换行一律 LF（跨平台检出行为一致，避免 autocrlf 造成的整文件 diff）
+* text=auto eol=lf
+
+# 二进制（本仓库当前没有，留位防将来误加）
+*.png binary
+*.jpg binary
+*.gif binary
+*.zip binary
